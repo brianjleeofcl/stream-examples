@@ -8,6 +8,9 @@
     "typescript": "^2.3.3"
   },
   "dependencies": {
-    "@types/node": "^7.0.22"
+    "@types/gm": "^1.17.30",
+    "@types/node": "^7.0.22",
+    "axios": "^0.16.1",
+    "gm": "^1.23.0"
   }
 }
