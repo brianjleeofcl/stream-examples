@@ -1,5 +1,5 @@
 import { createReadStream } from 'fs';
 
-const path = process.argv[2];
+const filepath: string = process.argv[2];
 
-createReadStream(path).pipe(process.stdout);
+createReadStream(filepath).pipe(process.stdout);
