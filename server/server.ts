@@ -2,6 +2,10 @@ import * as express from 'express';
 
 const app: express.Express = express();
 
+app.get('/', (req, res) => {
+  res.send('Server listening');
+})
+
 app.post('/upload-image', (req, res, next) => {
   if (!req.is('image/*')) return next(new Error('Unacceptable Content Type'))
   const buffers: Buffer[] = [];

@@ -2,6 +2,9 @@
 exports.__esModule = true;
 var express = require("express");
 var app = express();
+app.get('/', function (req, res) {
+    res.send('Server listening');
+});
 app.post('/upload-image', function (req, res, next) {
     if (!req.is('image/*'))
         return next(new Error('Unacceptable Content Type'));
