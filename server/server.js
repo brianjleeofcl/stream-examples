@@ -13,7 +13,7 @@ app.post('/upload-image', function (req, res, next) {
         res.send('Image accepted');
     });
 });
-var port = process.env.port || 8000;
+var port = process.env.PORT || 8000;
 app.listen(port, function () {
     console.log("listening on port " + port);
 });

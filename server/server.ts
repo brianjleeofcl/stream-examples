@@ -14,7 +14,7 @@ app.post('/upload-image', (req, res, next) => {
   })
 });
 
-const port: number = process.env.port || 8000;
+const port: number = process.env.PORT || 8000;
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
