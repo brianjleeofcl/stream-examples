@@ -7,9 +7,10 @@ app.get('/', (req, res) => {
 })
 
 app.post('/upload-image', (req, res, next) => {
-  if (!req.is('image/*')) return next(new Error('Unacceptable Content Type'))
+  if (!req.is('image/*')) return res.sendStatus(400);
   const buffers: Buffer[] = [];
   req.on('data', (chunk: Buffer) => buffers.push(chunk)).on('end', () => {
+    req.body = Buffer.concat(buffers).toString();
     res.send('Image accepted');
   })
 });
